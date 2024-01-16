@@ -492,7 +492,7 @@ class KMedoids(BaseEstimator, ClusterMixin, TransformerMixin):
             # This is what Arthur/Vassilvitskii tried, but did not report
             # specific results for other than mentioning in the conclusion
             # that it helped.
-            n_local_trials = 2 + int(np.log(n_clusters))
+            n_local_trials = 10 + int(np.log(n_clusters))
 
         center_id = random_state_.randint(n_samples)
         centers[0] = center_id
